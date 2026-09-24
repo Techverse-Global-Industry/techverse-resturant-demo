@@ -1,0 +1,7 @@
+"use client";
+import Image from "next/image";
+import { Plus } from "lucide-react";
+import type { Dish } from "@/lib/types";
+import { formatCFA } from "@/lib/data";
+import { useCartContext } from "./cart-provider";
+export function DishCard({dish}:{dish:Dish}){const {add}=useCartContext(); return <article className="group card overflow-hidden"><div className="relative aspect-[4/5] overflow-hidden"><Image src={dish.image} alt={dish.name} fill className="object-cover transition duration-700 group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw"/><div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/0 to-black/10"/><div className="absolute left-4 top-4 flex gap-2">{dish.featured?<span className="rounded-full bg-[#d9a35f] px-3 py-1 text-[10px] font-black uppercase tracking-[.15em] text-black">Chef's pick</span>:null}{dish.spicy?<span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-black uppercase tracking-[.15em] text-white backdrop-blur">Spiced</span>:null}</div><div className="absolute inset-x-4 bottom-4"><div className="text-xs uppercase tracking-[.16em] text-white/60">{dish.category}</div><h3 className="mt-1 font-serif text-2xl">{dish.name}</h3></div></div><div className="p-5"><p className="min-h-12 text-sm leading-6 text-[#a9a39a]">{dish.description}</p><div className="mt-5 flex items-center justify-between"><span className="font-semibold text-[#d9a35f]">{formatCFA(dish.price)}</span><button onClick={()=>add(dish.id)} className="btn btn-ghost"><Plus size={16}/>Add</button></div></div></article>}

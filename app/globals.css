@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --ink:#f8f5ef; --ink-muted:#a9a39a; --bg:#070707; --panel:#101010;
+  --line:rgba(255,255,255,.10); --gold:#d9a35f; --orange:#c97a2b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}
+button,a{min-height:44px}
+.section-shell{width:min(1280px,calc(100% - 32px));margin:0 auto}
+.glass{background:rgba(255,255,255,.05);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.10)}
+.gold-text{background:linear-gradient(135deg,#f7ddad,#d9a35f 48%,#c97a2b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gold-glow{box-shadow:0 0 80px rgba(217,163,95,.13)}
+.noise{position:relative}.noise:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+.hero-overlay{background:linear-gradient(90deg,rgba(7,7,7,.96) 0%,rgba(7,7,7,.72) 44%,rgba(7,7,7,.24) 100%),linear-gradient(180deg,rgba(7,7,7,.08),rgba(7,7,7,.78))}
+.nav-link{color:#bdbdbd;transition:.25s ease}.nav-link:hover,.nav-link.active{color:#f8f5ef}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 18px;font-weight:700;transition:.25s ease;border:1px solid rgba(255,255,255,.1)}
+.btn-gold{background:var(--gold);color:#0a0806}.btn-gold:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(217,163,95,.2)}
+.btn-ghost{background:rgba(255,255,255,.05);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:rgba(217,163,95,.45)}
+.field{width:100%;background:#121212;border:1px solid rgba(255,255,255,.10);color:#f8f5ef;border-radius:14px;padding:13px 14px;outline:none}.field:focus{border-color:rgba(217,163,95,.7);box-shadow:0 0 0 3px rgba(217,163,95,.08)}
+.kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#9f978b;font-weight:700}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.09);border-radius:24px}
+@media(max-width:640px){.section-shell{width:min(100% - 20px,1280px)}}
