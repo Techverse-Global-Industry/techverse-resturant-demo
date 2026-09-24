@@ -1,8 +1,9 @@
-# Rita's Kitchen — Frontend Demo
+# TechVerse Demo
 
-A frontend-only reconstruction of the premium Rita's Kitchen restaurant experience.
+A frontend-only reconstruction of the premium TechVerse Demo restaurant experience.
 
 ## What is included
+
 - Next.js App Router + TypeScript
 - Tailwind CSS v4
 - Framer Motion reveal animations
@@ -17,6 +18,7 @@ A frontend-only reconstruction of the premium Rita's Kitchen restaurant experien
 - Operations dashboard with mock data
 
 ## Deliberately excluded
+
 - Supabase
 - API routes
 - Databases
@@ -26,6 +28,7 @@ A frontend-only reconstruction of the premium Rita's Kitchen restaurant experien
 - Server actions / backend persistence
 
 ## Run
+
 ```bash
 npm install
 npm run dev
